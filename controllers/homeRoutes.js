@@ -10,7 +10,7 @@ const testObj = {
 
 router.post('/', async (req, res) => {
   try {
-    console.log('hit project post')
+    console.log('hit projeeeeect post')
     const newProject = await Project.create({
       ...req.body,
       user_id: req.session.user_id,
@@ -21,7 +21,6 @@ router.post('/', async (req, res) => {
     res.status(400).json(err);
   }
 });
-
 
 
 // these are homeroutes where we can hit the login page

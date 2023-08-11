@@ -1,6 +1,6 @@
+{{!-- this is like a wrapper around other html pages that we use --}}
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,15 +8,13 @@
 </head>
 
 <body>
-  <header class="display-flex justify-space-between align-center p-2">
+  <header>
     <h1>
       this is a main header we can change leater
     </h1>
     <!-- Only display the logout button if the user is logged in -->
     {{#if logged_in}}
-    <nav>
-      <button class="btn" id="logout">logout</button>
-    </nav>
+   
     {{/if}}
   </header>
   <main class="container container-fluid mt-5">
@@ -28,7 +26,7 @@
 
   <!-- Only include the logout script if the user is logged in -->
   {{#if logged_in}}
-  <script src="/js/logout.js"></script>
+  <script src=""></script>
   {{/if}}
 </body>
 

@@ -6,18 +6,27 @@ const loginHand = (event) => {
 }
 
 
+const newUserbtn = () =>
+fetch('/api/new', {
+  method:'GET',
+  headers: {
+    'Content-Type': 'application/json',
+  },
+});
+const newUserbtnClick = document.querySelector('#new')
+
+newUserbtnClick.addEventListener('click', newUserbtn)
+
+
 const tester = () =>
-fetch('/api/projects', {
+fetch('/', {
   method: 'POST',
   headers: {
     'Content-Type': 'application/json',
   },
   body: JSON.stringify({name: 'project'})
 })
-.then(res =>
-  res.json()
-)
-.then(data => console.log(data))
+
 
 
 
@@ -25,7 +34,5 @@ fetch('/api/projects', {
 
 document
   .addEventListener('submit', loginHand);
-
-
 
 console.log('Hit')
