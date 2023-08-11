@@ -1,17 +1,34 @@
+const path = require('path');
+// express baseline
 const express = require('express');
+// import express handlebars
+const exphbs = require('express-handlebars');
+// import helpers into server to tell handlebars to use them
+const helpers = require('./utils/helpers');
+
+
+// this is for session managment with cookies
 const session = require('express-session');
 const routes = require('./controllers');
 
+//hooks up s
 const sequelize = require('./config/connection');
-// this is probably for storing session data like login and password info 
+// this is for storing session data into the db
 const SequelizeStore = require('connect-session-sequelize')(session.Store);
 
 const app = express();
 const PORT = process.env.PORT || 3001;
 
+// tells handlebars where to look when calling helper functions
+const hbs = exphbs.create({ helpers });
+
+// this sets up sessions and stores it in db
 const sess = {
-  secret: 'Super secret secret',
-  cookie: {},
+  // this is a secret passkey for encrypting sessions
+  secret: 'Gary we changed this enjoy',
+  cookie: {
+    maxAge: 24 * 60 * 60 * 2000  // this is in miliseconds making this 2 days because 1000ms per second 
+  },
   resave: false,
   saveUninitialized: true,
   store: new SequelizeStore({
@@ -19,10 +36,20 @@ const sess = {
   })
 };
 
+// only need the save() method when you add or modify session data from the req obj -- the res goes inside this method becuase the res is modified by the req being modified -- middleware intercepting -- req.session is an empty object we can modify
+// Add express-session and store as Express.js middleware to be called later in the request obj
 app.use(session(sess));
+
+
+// tells express that handlebars is our engine with res.render
+app.engine('handlebars', hbs.engine);
+// sets engine
+app.set('view engine', 'handlebars');
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
+// sets the default/static to public
+app.use(express.static(path.join(__dirname, 'public')));
 
 app.use(routes);
 
