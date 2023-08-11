@@ -1,6 +1,6 @@
 # grp_project2
 
-
+//heroku logs --app patrick-notetaker-demo --tail
 
 1. Run npm install to get all dependencies
 2. controllers/homeRoutes.js is backend get

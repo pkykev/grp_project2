@@ -3,6 +3,7 @@ const { Project } = require('../../models');
 
 router.post('/', async (req, res) => {
   try {
+    console.log('hit project post')
     const newProject = await Project.create({
       ...req.body,
       user_id: req.session.user_id,

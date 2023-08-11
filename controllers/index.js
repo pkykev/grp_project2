@@ -1,6 +1,6 @@
 const router = require('express').Router();
 const apiRoutes = require('./api');
-// thjs is the landing page js with login in and create account info
+// this is the landing page js with login in and create account info
 const homeRoutes = require('./homeRoutes');
 
 

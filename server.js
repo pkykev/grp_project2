@@ -36,7 +36,7 @@ const sess = {
   })
 };
 
-// only need the save() method when you add or modify session data from the req obj -- the res goes inside this method becuase the res is modified by the req being modified -- middleware intercepting -- req.session is an empty object we can modify
+// only need the req.session.save() method when you add or modify session data from the req obj -- the res goes inside this method becuase the res is modified by the req being modified -- middleware intercepting -- req.session is an empty object we can modify
 // Add express-session and store as Express.js middleware to be called later in the request obj
 app.use(session(sess));
 
@@ -61,8 +61,8 @@ app.use(routes);
 
 // When you run the seed file, it should build all your tables for you, which means you can keep the first 
 // boolean value set to false
-const syncValue = (process.env.NODE_ENV === "production" ? false : true) 
+// const syncValue = (process.env.NODE_ENV === "production" ? false : true) 
 
-sequelize.sync({ force: syncValue }).then(() => {
+sequelize.sync({ force: false }).then(() => {
   app.listen(PORT, () => console.log('Now listening'));
 });
