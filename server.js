@@ -11,7 +11,7 @@ const helpers = require('./utils/helpers');
 const session = require('express-session');
 const routes = require('./controllers');
 
-//hooks up s
+//hooks up seqelize session storage
 const sequelize = require('./config/connection');
 // this is for storing session data into the db
 const SequelizeStore = require('connect-session-sequelize')(session.Store);
