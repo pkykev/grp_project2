@@ -1,10 +1,13 @@
 const router = require('express').Router();
 const { User } = require('../../models');
 
+// this would be a create account page
 router.post('/', async (req, res) => {
   try {
     const userData = await User.create(req.body);
 
+    // this sets the session.logged_in to true so it can be checked when trying to access other parts of the site
+    // this also logs the user in by virtue of the session.logged_in being = true
     req.session.save(() => {
       req.session.user_id = userData.id;
       req.session.logged_in = true;
@@ -48,6 +51,8 @@ router.post('/login', async (req, res) => {
   }
 });
 
+
+// when this page is hit it runs session.destroy so that the user needs to log back in to set session.logged_in to true so they may access the rest of the site
 router.post('/logout', (req, res) => {
   if (req.session.logged_in) {
     req.session.destroy(() => {
