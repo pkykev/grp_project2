@@ -18,6 +18,7 @@ const SequelizeStore = require('connect-session-sequelize')(session.Store);
 
 const app = express();
 const PORT = process.env.PORT || 3001;
+//
 
 // tells handlebars where to look when calling helper functions
 const hbs = exphbs.create({ helpers });
@@ -66,3 +67,7 @@ app.use(routes);
 sequelize.sync({ force: false }).then(() => {
   app.listen(PORT, () => console.log('Now listening'));
 });
+
+
+//this is heroku CLI syntax
+//heroku logs --app patrick-notetaker-demo --tail
