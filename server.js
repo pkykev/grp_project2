@@ -22,7 +22,7 @@ const SequelizeStore = require('connect-session-sequelize')(session.Store);
 
 
 const PORT = process.env.PORT;
-/
+
 // tells handlebars where to look when calling helper functions
 const hbs = exphbs.create({ helpers });
 
