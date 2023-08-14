@@ -9,7 +9,7 @@ class User extends Model {
     return bcrypt.compareSync(loginPw, this.password);
   }
 }
-
+// this User object has objects that correspond with the vars being passed in via the req.body from homeRoutes.js
 User.init(
   {
     id: {
@@ -18,7 +18,11 @@ User.init(
       primaryKey: true,
       autoIncrement: true,
     },
-    name: {
+    fname: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
+    lname: {
       type: DataTypes.STRING,
       allowNull: false,
     },
