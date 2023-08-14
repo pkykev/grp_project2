@@ -1,0 +1,40 @@
+
+
+h1 {
+    text-align: center;
+    justify-content: center;
+    color: rgb(252, 252, 252);
+}
+
+.navbar {
+    background-color: #343a40;
+    padding: 1rem 0;
+    color: #84bbf3;
+  }
+
+  .navbar-brand {
+    color: #84bbf3;
+    font-size: 1.5rem;
+    
+  }
+
+  .navbar-nav .nav-link {
+    color: #84bbf3;
+    
+  }
+
+  .navbar-toggler-icon {
+    background-color: #f8f9fa;
+    
+  }
+
+  /* Adjust spacing for small screens */
+  @media (max-width: 576px) {
+    .navbar-nav {
+      margin-top: 10px;
+    }
+
+    .navbar-toggler {
+      margin-bottom: 10px;
+    }
+  }

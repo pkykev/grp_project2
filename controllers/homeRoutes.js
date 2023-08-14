@@ -91,6 +91,16 @@ router.get('/signup', (req, res) => {
   res.render('newuser', { layout: 'secondary'})
 })
 
+router.get('/newuser', (req, res) => {
+  console.log("newuser");
+  res.render('newuser');
+})
+
+router.get('/', (req, res) => {
+  console.log("homelogin");
+  res.render('homepage');
+})
+
 
 
 

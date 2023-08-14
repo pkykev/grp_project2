@@ -66,9 +66,7 @@ const homelogin = async (event) => {
   document.location.replace("/")
 }
 
-document.querySelector('#newuser').addEventListener('click', newuser);
 document.querySelector('#new').addEventListener('click', newUserSubmit);
-document.querySelector('#login').addEventListener('click', loginSubmit);
 document.querySelector('#homelogin').addEventListener('click', homelogin);
 
 
