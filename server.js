@@ -1,5 +1,4 @@
 const path = require('path');
-// do you really need ('path')?
 const express = require('express');
 const app = express();
 const dotenv = require('dotenv').config()
