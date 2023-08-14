@@ -1,9 +1,12 @@
 const path = require('path');
-// express baseline
+// do you really need ('path')?
 const express = require('express');
-// import express handlebars
+const app = express();
+const dotenv = require('dotenv').config()
+// dotenv package serves (process.env)
+
+// import handlebar and helpers into server to tell handlebars to use them
 const exphbs = require('express-handlebars');
-// import helpers into server to tell handlebars to use them
 const helpers = require('./utils/helpers');
 
 
@@ -11,14 +14,14 @@ const helpers = require('./utils/helpers');
 const session = require('express-session');
 const routes = require('./controllers');
 
+//DB///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //hooks up seqelize session storage
-const sequelize = require('./config/connection');
 // this is for storing session data into the db
+const sequelize = require('./config/connection');
 const SequelizeStore = require('connect-session-sequelize')(session.Store);
 
-const app = express();
-const PORT = process.env.PORT || 3001;
-//
+
+const PORT = process.env.PORT;
 
 // tells handlebars where to look when calling helper functions
 const hbs = exphbs.create({ helpers });
