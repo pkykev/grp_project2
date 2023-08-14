@@ -6,6 +6,8 @@ const withAuth = require('../utils/auth');
 
 // this post creates a new user and stores it in DB
 router.post('/new', async (req, res) => {
+  // NEED something to detect if a user has already registered  new user email
+  // NEED to redirect user to newly created account login page
   console.log(req.body)
   console.log('hit new post')
   try {
@@ -87,9 +89,9 @@ router.get('/', (req, res) => {
 
 
 // when new user button is hit, this load the newuser handlebars
-router.get('/signup', (req, res) => {
-  res.render('newuser', { layout: 'secondary'})
-})
+// router.get('/signup', (req, res) => {
+//   res.render('newuser', { layout: 'secondary'})
+// })
 
 
 
