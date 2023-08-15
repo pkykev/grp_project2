@@ -20,9 +20,11 @@ const newUserSubmit = async (event) => {
       headers: { 'Content-Type': 'application/json' },
     });
     if (response.ok) {
+      // here we would set up the redirect to profile
       // we can do stuff in here like set a req.session var to check for persistent logged in status
       console.log('we did it!')
     } else {
+      // here is where we would throw alert for bad info
       console.log('give up we cant do this')
     }
   }
