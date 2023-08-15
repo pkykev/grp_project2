@@ -17,7 +17,13 @@ function userMail() {
   document.location.replace('/api/inbox')
 }
 
+const about = async (event) => {
+  event.preventDefault();
+  document.location.replace("/about")
+  console.log('click')
+}
 
+document.querySelector('#about').addEventListener('click', about);
 document.querySelector('.fa').addEventListener('click', userMail)
 document.querySelector('#logout').addEventListener('click', userLogout)
 

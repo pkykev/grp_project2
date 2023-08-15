@@ -31,8 +31,10 @@ const newuser = async (event) => {
 }
 
 
+
 document.querySelector('#newuser').addEventListener('click', newuser);
 document.querySelector('#login').addEventListener('click', loginSubmit);
+
 
 
 // this is the burron redirect to new user sign up
