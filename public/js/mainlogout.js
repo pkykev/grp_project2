@@ -11,7 +11,16 @@ const userLogout = async () => {
   }
 };
 
+function userMail() {
+
+  // probably need fetch for mail info from here
+  document.location.replace('/api/inbox')
+}
+
+
+document.querySelector('.fa').addEventListener('click', userMail)
 document.querySelector('#logout').addEventListener('click', userLogout)
+
 
 
 // const logout = async () => {

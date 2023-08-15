@@ -15,7 +15,7 @@ router.post('/new', async (req, res) => {
     const newUserData = await User.create(req.body);
     console.log(newUserData)
 
-    req.session.save(()=>{
+    req.session.save(() => {
       // this can be passed around to call up info from the front end since
       req.session.user_id = newUserData.id;
       // creates a boolean for logged_in we can use to do certain things we want a user logged_in for
@@ -31,38 +31,39 @@ router.post('/new', async (req, res) => {
 
 
 // login function
-router.post('/login', async (req,res)=>{
+router.post('/login', async (req, res) => {
   console.log(req.body);
   console.log('hit login post');
   try {
     // this will check for a user with that email adn grab the user object
-    const loginUserData = await User.findOne({ where: {email: req.body.email}});
+    const loginUserData = await User.findOne({ where: { email: req.body.email } });
     if (!loginUserData) {
-      res.status(400).json({ message: 'Bad email or password'});
+      res.status(400).json({ message: 'Bad email or password' });
       return;
     }
     // performs the User method of checkpassword on the password
     const passCheck = await loginUserData.checkPassword(req.body.password);
 
     if (!passCheck) {
-      res.status(400).json({message: 'Bad email or password'});
+      res.status(400).json({ message: 'Bad email or password' });
       return;
     }
-    req.session.save(()=>{
+    req.session.save(() => {
+      // this id can be passed around to pull user specific data from DB
       req.session.user_id = loginUserData.id;
       req.session.logged_in = true;
 
-      res.json({user: loginUserData, message: 'Login successful'});
+      res.json({ user: loginUserData, message: 'Login successful' });
     });
   } catch (err) {
     res.status(400).json(err);
   }
 })
 
-router.post('/logout', (req,res)=>{
+router.post('/logout', (req, res) => {
   console.log('hit logout post')
   if (req.session.logged_in) {
-    req.session.destroy(()=>{
+    req.session.destroy(() => {
       // need to look up .end()
       res.status(204).end();
     });
@@ -79,7 +80,12 @@ router.post('/logout', (req,res)=>{
 // route http://localhost:3001
 router.get('/', (req, res) => {
   console.log('working')
+  if (!req.session.logged_in){
   res.render('homepage',)
+} else {
+  //redirects to profile if logged in
+  res.redirect('/api/profile')
+}
 
 })
 
