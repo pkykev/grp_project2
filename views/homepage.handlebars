@@ -4,16 +4,73 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-  <link rel="stylesheet" type="text/css" href="/css/handlebars.css">
+  <title>Cruise Mate- find someone to sail the ocean blue with</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/homepage.css">
+  <link rel="stylesheet" href="css/form.css">
 </head>
 
-<body class="bg">
+<body>
+    <header class="hero">
+    <nav class="navbar">
+      <div class="container">
+        <a class="logo">Cruise Mate</a>
+       <img href="css/images/CruiseMateLogo.png"></img> 
+        <ul class="nav-list">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Profile</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+    <div class="hero-content">
+      <h1>Cruise Mate</h1>
+      <br></br>
+      {{!-- <a href="#" class="btn">Sign up!</a> --}}
+    </div>
+  </div>
+  <div class="video-container">
+    <video class="video-bg" autoplay loop muted>
+      <source src="css/images/video1.mp4" type="video/mp4">
+    </video>
+    <video class="video-bg" autoplay loop muted>
+      <source src="css/images/video2.mp4" type="video/mp4">
+    </video>
+    <video class="video-bg" autoplay loop muted>
+      <source src="css/images/video3.mp4" type="video/mp4">
+    </video>
+    <video class="video-bg" autoplay loop muted>
+      <source src="css/images/video4.mp4" type="video/mp4">
+    </video>
+  </div>
+  </header>
+  
   <form>
-     <h5>LOGIN</h5>
     <div class="form-group">
+    <h2>Email</h2>
+<br>
+    <label class="form-group">
+      <input type="email" class="form-control" id="loginEmail" aria-describedby="emailHelp" placeholder="Enter email">
+      <small id="emailHelp" class="form-text text-muted"><i>We'll never share your email with anyone else.</i></small>
+    </label>
+<br>
+<br>
+    <div class="form-group">
+    <h2>Password</h2>
+<br>
+    <label class="form-group">
+      <input type="password" class="form-control" id="loginPassword" placeholder="Password">
+    </label>
+<br>
+  <div class="form-group form-check">
+      <input type="checkbox" class="form-check-input" id="exampleCheck1">
+      <label class="form-check-label" for="exampleCheck1">Check me out</label>
+    </div>
+    <button type="submit" id='login' class="btn btn-primary">Submit</button>
+  </form>    
+
+    {{!-- <div class="form-group">
       <label for="exampleInputEmail1">Email address</label>
       <input type="email" class="form-control" id="loginEmail" aria-describedby="emailHelp" placeholder="Enter email">
       <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
@@ -21,22 +78,49 @@
     <div class="form-group">
       <label for="exampleInputPassword1">Password</label>
       <input type="password" class="form-control" id="loginPassword" placeholder="Password">
+    </div> --}}
+  
+  {{!-- <h2> OR NEW USER</h2>
+  <form>
+    <div class="row">
+      <div class="col">
+        <input type="text" class="form-control" placeholder="First name" id="fname">
+      </div>
+      <div class="col">
+        <input type="text" class="form-control" placeholder="Last name" id="lname">
+      </div>
+    </div>
+  </form>
+  <form>
+    <div class="form-group">
+      <label for="exampleInputEmail1">Email address</label>
+      <input type="email" class="form-control" id="newEmail" aria-describedby="emailHelp" placeholder="Enter email">
+      <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+    </div>
+    <div class="form-group">
+      <label for="exampleInputPassword1">Password</label>
+      <input type="password" class="form-control" id="newPassword" placeholder="Password at least 8 characters">
     </div>
     <div class="form-group form-check">
-      <input type="checkbox" class="form-check-input" id="exampleCheck1">
+      <input type="checkbox" class="form-check-input" id="exampleCheck2">
       <label class="form-check-label" for="exampleCheck1">Check me out</label>
     </div>
-    <a id="newuser">Or New User</a>
-    <button type="submit" id='login' class="btn btn-primary">Submit</button>
-  </form>
- 
- 
+    <button type="button" id="new" class="btn btn-success">New User</button> --}}
+
+  {{!-- </form> --}}
+  
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous">
     </script>
-  <!-- need to add js logic -->
   <script src="/js/index.js"></script>
+
+   <footer>
+    <div class="container"> 
+      <p>&copy;  2023 Cruise Mate. All rights reserved.	&#xf13d;</p>
+
+    </div>
+  </footer>
 
 </body>
 
