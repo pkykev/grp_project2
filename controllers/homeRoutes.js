@@ -109,6 +109,16 @@ router.get('/', (req, res) => {
   res.render('homepage');
 })
 
+router.get('/about', (req, res) => {
+  console.log("about");
+  res.render('about');
+})
+
+router.get('/contact', (req, res) => {
+  console.log("contact");
+  res.render('contact');
+})
+
 
 
 
