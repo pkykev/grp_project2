@@ -1,3 +1,4 @@
+
 // add logout feature here for the main html wrapper
 const userLogout = async () => {
   const response = await fetch('/logout', {
@@ -11,11 +12,19 @@ const userLogout = async () => {
   }
 };
 
-function userMail() {
+const userMail = async () => {
+  const response = await fetch('/inbox', {
+    method: 'GET',
+    headers: { 'Content-Type': 'application/json' },
+  });
 
-  // probably need fetch for mail info from here
-  document.location.replace('/api/inbox')
-}
+  if (response.ok) {
+    document.location.replace('/inbox')
+  }
+  else {
+    console.log(error)
+  }
+};
 
 
 document.querySelector('.fa').addEventListener('click', userMail)

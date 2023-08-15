@@ -1,6 +1,6 @@
 const router = require('express').Router();
 // bring in user model to create new user when button is hit
-const { User } = require('../models');
+const { User, Mail } = require('../models');
 // we dont really need auth on the login page, however to use other parts we should as a requirement
 const withAuth = require('../utils/auth');
 
@@ -80,18 +80,37 @@ router.post('/logout', (req, res) => {
 // route http://localhost:3001
 router.get('/', (req, res) => {
   console.log('working')
-  if (!req.session.logged_in){
-  res.render('homepage',)
-} else {
-  //redirects to profile if logged in
-  res.redirect('/api/profile')
-}
+  if (!req.session.logged_in) {
+    res.render('homepage',)
+  } else {
+    //redirects to profile if logged in
+    res.redirect('/api/profile')
+  }
 
 })
 
 
 
 
+router.get('/inbox', async (req, res) => {
+  console.log('inbox working')
+  // need to pass in user ID aswell
+  // check for previous session
+  if (req.session.logged_in) {
+
+    // findbypk current user_i => grab email => mail.findall where: email => render message as if reciever
+    const user = await User.findByPk(req.session.user_id);
+    const mailBox = await Mail.findAll({ where: { reciever: user.dataValues.email } });
+    const mail = mailBox.map(item => item.get({ plain: true }))
+
+    res.status(200).render('inbox', {
+      mail,
+      logged_in: true,
+    });
+  } else {
+    res.redirect('/')
+  }
+})
 
 
 // when new user button is hit, this load the newuser handlebars

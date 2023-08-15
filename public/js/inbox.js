@@ -16,6 +16,9 @@ const sendMessage = async (event) => {
     body: JSON.stringify({ reciever, title, messagetxt }),
     headers: { 'Content-Type': 'application/json' },
   });
+  if (response.ok){
+    console.log('Great!')
+  };
 }
 
 
