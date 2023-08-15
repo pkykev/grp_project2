@@ -1,0 +1,28 @@
+
+
+const videoContainer = document.querySelector('.video-container');
+const videos = document.querySelectorAll('.video-bg');
+
+let currentVideoIndex = 0;
+
+function playNextVideo() {
+  videos[currentVideoIndex].style.opacity = 0;
+  currentVideoIndex = (currentVideoIndex + 1) % videos.length;
+  videos[currentVideoIndex].style.opacity = 0.3;
+}
+
+
+let timer;
+
+document.addEventListener('input', e => {
+  const el = e.target;
+  
+  if( el.matches('[data-color]') ) {
+    clearTimeout(timer);
+    timer = setTimeout(() => {
+      document.documentElement.style.setProperty(`--color-${el.dataset.color}`, el.value);
+    }, 100)
+  }
+})
+setInterval(playNextVideo, 10000); // Switch every 10 seconds
+current_city
