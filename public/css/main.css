@@ -38,3 +38,9 @@ h1 {
       margin-bottom: 10px;
     }
   }
+
+  .fa-envelope {
+    display: flex;
+    /* I need to find a better way to move this over */
+    margin-left: 50rem;
+  }
