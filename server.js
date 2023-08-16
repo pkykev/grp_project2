@@ -59,6 +59,7 @@ app.use(routes);
 
 
 
+
 // Set both boolean values to true when you first deploy to heroku; ater database has been built
 // set first boolean value to false and keep it there
 
@@ -73,3 +74,13 @@ sequelize.sync({ force: false }).then(() => {
 
 //this is heroku CLI syntax
 //heroku logs --app patrick-notetaker-demo --tail
+
+
+
+
+
+
+
+
+
+
