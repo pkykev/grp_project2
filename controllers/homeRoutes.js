@@ -102,16 +102,18 @@ router.get('/inbox', async (req, res) => {
 
     // findbypk current user_i => grab email => mail.findall where: email => render message as if reciever
     const user = await User.findByPk(req.session.user_id);
-    const mailBox = await Mail.findAll({ 
-      where: { 
+    const mailBox = await Mail.findAll({
+      where: {
         [Op.or]: [
-        {reciever: user.dataValues.email},
-        {sender: req.session.user_id}
-      ]} 
+          { reciever: user.dataValues.email },
+          { sender: req.session.user_id }
+        ]
+      }
     });
     const mail = mailBox.map(item => item.get({ plain: true }))
     console.log(mail)
     res.status(200).render('inbox', {
+      userSent, /*(mail.sender == req.session.user_id)*/
       mail,
       logged_in: true,
     });
