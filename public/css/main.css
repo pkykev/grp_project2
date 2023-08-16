@@ -44,3 +44,11 @@ h1 {
     /* I need to find a better way to move this over */
     margin-left: 50rem;
   }
+
+  #recieve {
+    background-color: aqua;
+  }
+
+  #send {
+    background-color: orange;
+  }

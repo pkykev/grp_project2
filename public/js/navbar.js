@@ -1,6 +1,6 @@
 
 
-const about = async (event) => {
+const aboutPage = async (event) => {
   event.preventDefault();
   document.location.replace("/about")
   console.log('click')
@@ -12,7 +12,7 @@ const home = async (event) => {
   console.log('click')
 }
 
-document.querySelector('#about').addEventListener('click', about);
+document.querySelector('#about').addEventListener('click', aboutPage);
 document.querySelector('#home').addEventListener('click', home);
 
 
