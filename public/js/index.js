@@ -17,6 +17,7 @@ const loginSubmit = async (event) => {
       console.log('login good!');
       document.location.replace('/api/profile')
     } else {
+      // put any alert or however yuo want to notify user wrong info here
       console.log('give up, login failed')
     }
   }
@@ -34,12 +35,5 @@ const newuser = async (event) => {
 
 document.querySelector('#newuser').addEventListener('click', newuser);
 document.querySelector('#login').addEventListener('click', loginSubmit);
-
-
-
-// this is the burron redirect to new user sign up
-// const newUserbtnClick = document.querySelector('#new')
-// newUserbtnClick.addEventListener('click', () => document.location.replace('/signup'))
-
 
 console.log('Hit')
