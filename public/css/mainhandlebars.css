@@ -1,0 +1,12 @@
+.page-title {
+    text-align: center; /* Center horizontally */
+    margin-bottom: 0%;
+}
+.div-header {
+    text-align: center; /* Center horizontally */
+    padding-top: 0%; /* Center vertically */
+  }
+
+  .header h1 {
+    margin: 0; /* Remove default margin to avoid extra space */
+  }

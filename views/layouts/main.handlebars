@@ -10,6 +10,7 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
   <link rel="stylesheet" type="text/css" href="/css/mainhandlebars.css" />
+  <link rel="icon" href="/public/css/images/favicon.ico" type="image/x-icon">
   <script src="https://kit.fontawesome.com/d838090734.js" crossorigin="anonymous"></script>
 
 
@@ -35,6 +36,12 @@
             <li class="nav-item">
               <a class="nav-link" id="home">Home</a>
             </li>
+            <div class="div-header">
+               <h1 class="page-title">
+                  Cruise Mate
+                  <img src="/css/images/cruisemate.jpg" width=" 5%", height="10%">
+              </h1>
+            </div>
             <!-- Only display the logout button if the user is logged in -->
             {{#if logged_in}}
             <li class="nav-item">
@@ -47,10 +54,7 @@
         </div>
       </div>
     </nav>
-    <h1>
-      Cruise Mate
-      <img src="/css/images/cruisemate.jpg" width=" 5%", height="10%">
-    </h1>
+     
     <!-- Only display the logout button if the user is logged in -->
     {{#if logged_in}}
 
