@@ -81,6 +81,19 @@ form .message a{
     -webkit-animation: AnimateBG 20s ease infinite;
             animation: AnimateBG 20s ease infinite;
   }
+
+  .form-container {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+
+  /* Adjustments for small screens */
+  @media (max-width: 576px) {
+    .form-container {
+      padding: 10px;
+    }
+  }
   
   @-webkit-keyframes AnimateBG {
     0% {
