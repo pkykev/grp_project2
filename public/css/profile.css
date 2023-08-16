@@ -31,6 +31,12 @@ li::before {
     margin-right: 15px;
 }
 
+.checkmark li::before {
+  font-family: 'Font Awesome 5 Free';
+    content: "\2611";
+    color: #242424;
+    margin-right: 15px;
+}
 .bg {
     width:auto;
     height:auto;
