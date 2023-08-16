@@ -143,9 +143,9 @@ router.get('/about', (req, res) => {
   res.render('about');
 })
 
-router.get('/contact', (req, res) => {
-  console.log("contact");
-  res.render('contact');
+router.get('/sources', (req, res) => {
+  console.log("sources");
+  res.render('sources');
 })
 
 

@@ -5,6 +5,7 @@
 .div-header {
     text-align: center; /* Center horizontally */
     padding-top: 0%; /* Center vertically */
+    color: rgb(252, 252, 252);
   }
 
   .header h1 {
