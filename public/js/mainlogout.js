@@ -32,6 +32,8 @@ const about = async (event) => {
   console.log('click')
 }
 
+
+
 document.querySelector('#about').addEventListener('click', about);
 document.querySelector('.fa').addEventListener('click', userMail)
 document.querySelector('#logout').addEventListener('click', userLogout)
