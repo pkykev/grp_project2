@@ -1,6 +1,8 @@
 const router = require('express').Router();
 // bring in user model to create new user when button is hit
 const { User, Mail } = require('../models');
+// calls in operators from sequelize
+const { Op } = require("sequelize");
 // we dont really need auth on the login page, however to use other parts we should as a requirement
 const withAuth = require('../utils/auth');
 
@@ -100,9 +102,15 @@ router.get('/inbox', async (req, res) => {
 
     // findbypk current user_i => grab email => mail.findall where: email => render message as if reciever
     const user = await User.findByPk(req.session.user_id);
-    const mailBox = await Mail.findAll({ where: { reciever: user.dataValues.email } });
+    const mailBox = await Mail.findAll({ 
+      where: { 
+        [Op.or]: [
+        {reciever: user.dataValues.email},
+        {sender: req.session.user_id}
+      ]} 
+    });
     const mail = mailBox.map(item => item.get({ plain: true }))
-
+    console.log(mail)
     res.status(200).render('inbox', {
       mail,
       logged_in: true,
