@@ -15,20 +15,25 @@
   <button type="button" class="btn btn-secondary" id="sendmessage">Send</button>
 </form>
 <ul>
-  {{#each mail as |message|}}
-  {{#if userSent}}
 
+
+
+  {{#each modifiedMail as |message|}}
+  {{#if message.sender}}
   <div id='recieve'>
 
     <h3>{{message.reciever}}</h3>
     <li class='container-fluid'>{{ message.messagetxt }}</li>
   </div>
-
   {{else}}
+  <div id='send'>
 
-  
+    <h3>{{message.reciever}}</h3>
+    <li class='container-fluid'>{{ message.messagetxt }}</li>
+  </div>
   {{/if}}
   {{/each}}
+
 
 </ul>
 <script src="/js/inbox.js"></script>

@@ -111,10 +111,17 @@ router.get('/inbox', async (req, res) => {
       }
     });
     const mail = mailBox.map(item => item.get({ plain: true }))
-    console.log(mail)
+    // check to see who sender is for rendering
+    const modifiedMail = mail.map(obj => {
+      if (obj.sender == req.session.user_id) {
+        return { ...obj, sender: true }
+      } else {
+        return { ...obj, sender: false }
+      }
+    })
+    console.log(modifiedMail)
     res.status(200).render('inbox', {
-      userSent, /*(mail.sender == req.session.user_id)*/
-      mail,
+      modifiedMail,
       logged_in: true,
     });
   } else {
