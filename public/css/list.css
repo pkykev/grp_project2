@@ -1,0 +1,45 @@
+body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+    }
+    
+    header, footer {
+        background-color: #333;
+        color: white;
+        text-align: center;
+        padding: 10px 0;
+    }
+    
+    main {
+        padding: 20px;
+    }
+    
+    .friend-card {
+        border: 1px solid #ddd;
+        padding: 10px;
+        margin-bottom: 15px;
+        display: flex;
+        align-items: center;
+    }
+    
+    .friend-details {
+        margin-left: 10px;
+    }
+    
+    .friend-name {
+        font-weight: bold;
+    }
+    
+    .friend-email {
+        color: #777;
+    }
+    
+    .friend-gender {
+        color: #444;
+    }
+    
+    .friend-location {
+        color: #666;
+    }
+    

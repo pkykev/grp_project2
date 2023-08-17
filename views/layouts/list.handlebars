@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../public/css/list.css">
+    <title> Listing</title>
+</head>
+<body>
+    <header>
+        <h1>Listing</h1>
+    </header>
+    <main>
+        <section id="friend-list">
+            <!-- Friend profiles will be generated here -->
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2023  Listing</p>
+    </footer>
+    <script src="handlebars-v4.7.7.min.js"></script>
+    <script id="friend-template" type="text/x-handlebars-template">
+        {{#each friends}}
+        <div class="friend-card">
+            <div class="friend-details">
+                <img class="friend-picture" src="{{profile_picture}}" alt="{{first_name}}'s Picture">
+                <p class="friend-name">{{first_name}} {{last_name}}</p>
+                <p class="friend-email">{{email}}</p>
+                <p class="friend-gender">Gender: {{gender}}</p>
+                <p class="friend-location">Cruise Location: {{cruise_location}}</p>
+            </div>
+        </div>
+        {{/each}}
+    </script>
+    <script src="../../public/js/list.js"></script>
+</body>
+</html>
