@@ -1,22 +1,20 @@
 const asyncHandler = require('express-async-handler')
+const Handlebars = require('handlebars')
 
-const friendlist = asyncHandler(async())
-fetch("mockData.json")
-.then(response => response.json())
-.then(data => {
-    // Data is now available as a JavaScript object
-    displayData(data);
-})
-.catch(error => {
-    console.error("Error fetching data:", error);
-});
+const fetchData = asyncHandler(async () => {
+    try {
+        const response = await fetch("data.json");
+        const data = await response.json();
+        displayData(data);
+    } catch (error) {
+        console.error("Error fetching data:", error);
+    }
+}
+)
+
+const friendList = fetchData
 
 
-const friendList = [
-    
-];
-
-// Compile Handlebars template
 const source = document.getElementById("friend-template").innerHTML;
 const template = Handlebars.compile(source);
 
