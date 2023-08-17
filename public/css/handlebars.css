@@ -1,171 +1,196 @@
 body {
-    padding: 0;
-    margin: 0;
-  
+  padding: 0;
+  margin: 0;
+
 }
 
 /*login form css*/
-form{
-    font-family: "Roboto", sans-serif;
-    position: relative;
-    z-index: 1;
-    background: #FFFFFF;
-    opacity: 99%;
-    max-width: 260px;
-    margin: 200px auto 100px;
-    padding: 10px 45px 30px 45px;
-    text-align: center;
-    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
-    border-radius: 10px;
-    float: left 100px;
+form {
+  font-family: "Roboto", sans-serif;
+  position: relative;
+  z-index: 1;
+  background: #FFFFFF;
+  opacity: 99%;
+  max-width: 260px;
+  margin: 200px auto 100px;
+  padding: 10px 45px 30px 45px;
+  text-align: center;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+  border-radius: 10px;
+  float: left 100px;
 }
 
 
-form .form-group{
-    font-size: 15px;
-    padding: 1px;
-    text-align: left;
-    float: left 100px;
+form .form-group {
+  font-size: 15px;
+  padding: 1px;
+  text-align: left;
+  float: left 100px;
 
 }
-form input{
-    outline: 0;
-    border-radius: 10px;
-    background: #F2F2F2;
-    width: 100%;
-    border: 0;
-    margin: 0 0 15px;
-    padding: 15px;
-    box-sizing: border-box;
-    font-size: 14px;
+
+form input {
+  outline: 0;
+  border-radius: 10px;
+  background: #F2F2F2;
+  width: 100%;
+  border: 0;
+  margin: 0 0 15px;
+  padding: 15px;
+  box-sizing: border-box;
+  font-size: 14px;
 }
-form input:hover{
-    background-color: #D3F8F9;
-    transition: all 1s ease 0s;
+
+form input:hover {
+  background-color: #D3F8F9;
+  transition: all 1s ease 0s;
 }
-form input:focus{
-    background-color: #D3F8F9;
-    transition: all 1s ease 0s;
+
+form input:focus {
+  background-color: #D3F8F9;
+  transition: all 1s ease 0s;
 }
-form button{
-    text-transform: uppercase;
-    outline: 0;
-    border-radius: 10px;
-    background: #1bd1da;
-    width: 100%;
-    border: 0;
-    padding: 15px;
-    color: #FFFFFF;
-    font-size: 14px;
-    cursor: pointer;
+
+form button {
+  text-transform: uppercase;
+  outline: 0;
+  border-radius: 10px;
+  background: #1bd1da;
+  width: 100%;
+  border: 0;
+  padding: 15px;
+  color: #FFFFFF;
+  font-size: 14px;
+  cursor: pointer;
 }
-form button:hover, .form button:active, .form button:focus{
-    background-color: #fafafa;
-    transition: all 1s ease 0s;
+
+form button:hover,
+.form button:active,
+.form button:focus {
+  background-color: #fafafa;
+  transition: all 1s ease 0s;
 }
-form .message{
-    margin: 15px 0 0;
-    color: #B3B3B3;
-    font-size: 12px;
+
+form .message {
+  margin: 15px 0 0;
+  color: #B3B3B3;
+  font-size: 12px;
 }
-form .message a{
-    color: #ffffff;
-    text-decoration: none;
+
+form .message a {
+  color: #ffffff;
+  text-decoration: none;
 }
-      
+
 
 .bg {
-    width: 100%;
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-size: 300% 300%;
-    background-image: linear-gradient(-45deg, rgb(226, 234, 75) 0%, rgb(0, 195, 255) 25%, rgb(227, 194, 63) 51%,  #ffde4a 100%);
-    -webkit-animation: AnimateBG 20s ease infinite;
-    animation: AnimateBG 20s ease infinite;
-  }
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-size: 300% 300%;
+  background-image: linear-gradient(-45deg, rgb(226, 234, 75) 0%, rgb(0, 195, 255) 25%, rgb(227, 194, 63) 51%, #ffde4a 100%);
+  -webkit-animation: AnimateBG 20s ease infinite;
+  animation: AnimateBG 20s ease infinite;
+}
 
+.form-container {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.form-content {
+  float: left 100px;
+  
+}
+
+/* Adjustments for small screens */
+@media (max-width: 576px) {
   .form-container {
-    max-width: 400px;
-    margin: 0 auto;
-    padding: 20px;
-  }
-
-  .form-content {
-    float: left 100px;
-
-  }
-
-  /* Adjustments for small screens */
-  @media (max-width: 576px) {
-    .form-container {
-      padding: 10px;
-    }
-  }
-  
-  @-webkit-keyframes AnimateBG {
-    0% {
-      background-position: 0% 50%;
-    }
-    50% {
-      background-position: 100% 50%;
-    }
-    100% {
-      background-position: 0% 50%;
-    }
-  }
-  
-  @keyframes AnimateBG {
-    0% {
-      background-position: 0% 50%;
-    }
-    50% {
-      background-position: 100% 50%;
-    }
-    100% {
-      background-position: 0% 50%;
-    }
-  }
-
-  footer {
-    background-color: #222;
-    color: #fff;
-    text-align: center;
-    padding: 10px 0;
-  } 
-
-  .card {
-outline: #ff0000;
-outline-color: #222;
-outline-width: 20px;
-  }
-
-  .card-container {
-    max-height: 200px; /* Set the desired fixed height */
-    overflow-y: auto;
-    border: 1px solid #ccc;
     padding: 10px;
   }
-  
-  .scrollable-card {
-    list-style: none;
-    padding: 0;
-    margin: 0;
+}
+
+@-webkit-keyframes AnimateBG {
+  0% {
+    background-position: 0% 50%;
   }
-  
-  .message-received, .message-sent {
-    padding: 10px;
-    border: 10px solid #4ff3f6;
-    margin: 10px 0;
-    background-color: #f9f9f9;
+
+  50% {
+    background-position: 100% 50%;
   }
-  
-  .message-received h3, .message-sent h3 {
-    margin: 0;
+
+  100% {
+    background-position: 0% 50%;
   }
-  
-  .message-received p, .message-sent p {
-    margin: 5px 0;
+}
+
+@keyframes AnimateBG {
+  0% {
+    background-position: 0% 50%;
   }
-  
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+footer {
+  background-color: #222;
+  color: #fff;
+  text-align: center;
+  padding: 10px 0;
+}
+
+.card {
+  outline: #ff0000;
+  outline-color: #222;
+  outline-width: 20px;
+}
+
+.card-container {
+  max-height: 20rem;
+  /* Set the desired fixed height */
+  overflow-y: auto;
+  border: 1px solid #ccc;
+  padding: 10px;
+}
+
+.scrollable-card {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.message-received {
+  padding: 10px;
+  border: 10px solid #4ff3f6;
+  margin: 10px 0;
+  background-color: #FAF9F6;
+  border-radius: 5px 50px;
+}
+
+.message-sent {
+  padding: 10px;
+  border: 10px solid #f6b94f;
+  margin: 10px 0;
+  background-color: #FAF9F6;
+  border-radius: 50px 5px;
+}
+
+.message-received h3,
+.message-sent h3 {
+  margin: 0;
+}
+
+.message-received p,
+.message-sent p {
+  margin: 5px 0;
+}
+
