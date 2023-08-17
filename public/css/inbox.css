@@ -6,19 +6,55 @@
   border-radius: 4px;
   cursor: pointer;
 }
-.bg {
-  width:auto;
-  height:auto;
-  background-size: 300% 300%;
-  background-image: linear-gradient(-45deg, rgb(226, 234, 75) 0%, rgb(0, 195, 255) 25%, rgb(227, 194, 63) 51%,  #ffde4a 100%);
-  -webkit-animation: AnimateBG 20s ease infinite;
-          animation: AnimateBG 20s ease infinite;
+
+.content-container {
+  display: flex;
+  gap: 20px; 
+  padding: 20px; 
+  justify-content: center; 
+  align-items: center; 
+}
+
+.form-content {
+  flex: 1; 
+}
+
+.card-container {
+  flex: 1; 
+  max-height: 250px; 
+  overflow-y: auto;
+  border: 5px solid #929292;
+  padding: 10px;
+}
+
+/* Media Queries for Small Screens */
+@media (max-width: 576px) {
+  .form-container {
+    padding: 10px;
+  }
+  
+  .form-content {
+    margin-top: 0; /* Reset margin-top for small screens */
+  }
 }
 
 
-footer {
-  background-color: #222;
-  color: #fff;
-  text-align: center;
-  padding: 10px 0;
-} 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
