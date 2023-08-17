@@ -157,18 +157,8 @@ router.get('/sources', (req, res) => {
 })
 
 router.get('/list', (req,res)=>{
-  conosle.log('listing')
-  res.status(200).render('')
+  console.log('listing')
+  res.status(200).render('list')
 })
-
-
-
-
-
-
-
-
-
-
 
 module.exports = router;
