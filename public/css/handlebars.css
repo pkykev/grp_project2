@@ -5,19 +5,20 @@ body {
 }
 
 /*login form css*/
-form {
-  font-family: "Roboto", sans-serif;
-  position: relative;
-  z-index: 1;
-  background: #FFFFFF;
-  opacity: 99%;
-  max-width: 260px;
-  margin: 200px auto 100px;
-  padding: 10px 45px 30px 45px;
-  text-align: center;
-  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
-  border-radius: 10px;
-  float: left 100px;
+form{
+    font-family: "Roboto", sans-serif;
+    position: relative;
+    z-index: 1;
+    background: #FFFFFF;
+    opacity: 99%;
+    max-width: 300px;
+    max-height: 400px;
+    margin: 20px auto 10px;
+    padding: 10px 45px 30px 45px;
+    text-align: center;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+    border-radius: 10px;
+    
 }
 
 
@@ -148,49 +149,65 @@ footer {
   padding: 10px 0;
 }
 
-.card {
-  outline: #ff0000;
-  outline-color: #222;
-  outline-width: 20px;
-}
+  .card {
+    outline: #ff0000;
+    outline-color: #222;
+    outline-width: 20px;
+  }
 
-.card-container {
-  max-height: 20rem;
-  /* Set the desired fixed height */
-  overflow-y: auto;
-  border: 1px solid #ccc;
-  padding: 10px;
-}
+  
+  
+  .scrollable-card {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    flex: 1;
+  }
+  
+  .message-received {
+    padding: 10px;
+    border: 10px solid #4ff3f6;
+    margin: 10px 0;
+    background-color: #FAF9F6;
+    border-radius: 5px 50px;
+  }
+  
+  .message-sent {
+    padding: 10px;
+    border: 10px solid #f6b94f;
+    margin: 10px 0;
+    background-color: #FAF9F6;
+    border-radius: 50px 5px;
+  }
+  
+  .message-received h3, .message-sent h3 {
+    margin: 0;
+  }
+  
+  .message-received p, .message-sent p {
+    margin: 5px 0;
+  }
+  
+  
 
-.scrollable-card {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
 
-.message-received {
-  padding: 10px;
-  border: 10px solid #4ff3f6;
-  margin: 10px 0;
-  background-color: #FAF9F6;
-  border-radius: 5px 50px;
-}
 
-.message-sent {
-  padding: 10px;
-  border: 10px solid #f6b94f;
-  margin: 10px 0;
-  background-color: #FAF9F6;
-  border-radius: 50px 5px;
-}
 
-.message-received h3,
-.message-sent h3 {
-  margin: 0;
-}
 
-.message-received p,
-.message-sent p {
-  margin: 5px 0;
-}
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
