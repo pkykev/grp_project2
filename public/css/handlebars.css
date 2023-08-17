@@ -11,13 +11,14 @@ form{
     z-index: 1;
     background: #FFFFFF;
     opacity: 99%;
-    max-width: 260px;
-    margin: 200px auto 100px;
+    max-width: 300px;
+    max-height: 400px;
+    margin: 20px auto 10px;
     padding: 10px 45px 30px 45px;
     text-align: center;
     box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
     border-radius: 10px;
-    float: left 100px;
+    
 }
 
 
@@ -136,22 +137,18 @@ form .message a{
   } 
 
   .card {
-outline: #ff0000;
-outline-color: #222;
-outline-width: 20px;
+    outline: #ff0000;
+    outline-color: #222;
+    outline-width: 20px;
   }
 
-  .card-container {
-    max-height: 200px; /* Set the desired fixed height */
-    overflow-y: auto;
-    border: 1px solid #ccc;
-    padding: 10px;
-  }
+  
   
   .scrollable-card {
     list-style: none;
     padding: 0;
     margin: 0;
+    flex: 1;
   }
   
   .message-received, .message-sent {
@@ -168,4 +165,27 @@ outline-width: 20px;
   .message-received p, .message-sent p {
     margin: 5px 0;
   }
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   
