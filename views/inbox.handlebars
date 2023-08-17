@@ -11,6 +11,7 @@
   <link rel="icon" href="/public/css/images/favicon.ico" type="image/x-icon">
  
 </head>
+
 <body class="bg">
   <div class="content-container">
     <form class="form-content">
@@ -34,12 +35,12 @@
         {{#each modifiedMail as |message|}}
         {{#if message.sender}}
         <li class="message-received">
-          <h3>{{message.receiver}}</h3>
+          <h5>{{message.reciever}}</h5>
           <p>{{ message.messagetxt }}</p>
         </li>
         {{else}}
         <li class="message-sent">
-          <h3>{{message.receiver}}</h3>
+          <h5>{{message.reciever}}</h5>
           <p>{{ message.messagetxt }}</p>
         </li>
         {{/if}}
@@ -48,4 +49,3 @@
     </div>
   </div>
 </body>
-</html>
