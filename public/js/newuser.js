@@ -23,6 +23,8 @@ const newUserSubmit = async (event) => {
       // here we would set up the redirect to profile
       // we can do stuff in here like set a req.session var to check for persistent logged in status
       console.log('we did it!')
+      document.location.replace('/api/profile')
+
     } else {
       // here is where we would throw alert for bad info
       console.log('give up we cant do this')
