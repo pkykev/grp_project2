@@ -1,10 +1,10 @@
+# Ship Mate!
 
-# Blow the Deck!
 ### "Navigating Love on the High Seas"
 
-CruiseConnect is a unique and exciting dating and meeting platform designed for travelers who share a passion for cruise ship adventures. Whether you're a solo traveler seeking companionship or someone looking to find romance amidst the waves, CruiseConnect offers a seamless way to connect with like-minded individuals who will be sharing the same cruise ship journey.
+Ship Mate is a unique and exciting dating and meeting platform designed for travelers who share a passion for cruise ship adventures. Whether you're a solo traveler seeking companionship or someone looking to find romance amidst the waves, CruiseConnect offers a seamless way to connect with like-minded individuals who will be sharing the same cruise ship journey.
 
-## Demo
+## Link to Live Demo
 
 https://github.com/Ad31aid/real_sementic_html
 
@@ -16,20 +16,14 @@ https://github.com/Ad31aid/real_sementic_html
 - _Secure Messaging_: Engage in meaningful conversations using our secure messaging system. Chat with confidence, knowing that your privacy is a top priority.
 - _Profile Personalization_: Create a vibrant profile that showcases your personality, interests, and cruise plans. Highlight your love for travel, your excitement for new experiences, and what you're looking for in a shipmate.
 
-## Tech Stack
+# Tech Stack
 
-**Client:** 
+- HTML, CSS, JS
+- Node, Express, MySQL, Sequelize, Handlebars
 
-**Server:** Node.js, Express
+## Other Tech used:
 
-**Packages:**
-## Deployment
-
-To deploy this project run
-
-```bash
-  npm run deploy
-```
+- Bootstrap, CSS Gradient Styling, Bing Image Creator
 
 ## Contributing
 
@@ -41,9 +35,7 @@ Please adhere to this project's `code of conduct`.
 
 ## Authors
 
--[] Patric
-- [] Jon
-- [] Lance
+- [@pkykev] Patrick
+- [@JJumangi] Jon
+- [@trouterwen] Lance
 - [@Ad31aid] Sean Chen
-
-

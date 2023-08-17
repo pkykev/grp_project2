@@ -1,5 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
+
 
 <head>
   <meta charset="UTF-8">
@@ -45,5 +44,25 @@
       {{/each}}
     </ul>
   </div>
-</body>
+
+  {{else}}
+  <div id='send'>
+
+    <h3>{{message.reciever}}</h3>
+    <li class='container-fluid'>{{ message.messagetxt }}</li>
+  </div>
+  {{/if}}
+  {{/each}}
+
+
+</ul>
 <script src="/js/inbox.js"></script>
+
+  <footer>
+    <div class="container"> 
+      <p>  ©2023 Ship Mate. All rights reserved.</p>
+      <img src="/css/images/cruisemate.jpg" width = '5%' height = '8%'>
+    </div>
+  </footer>
+
+</body>
