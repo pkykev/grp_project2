@@ -5,6 +5,7 @@
 Ship Mate is a unique and exciting dating and meeting platform designed for travelers who share a passion for cruise ship adventures. Whether you're a solo traveler seeking companionship or someone looking to find romance amidst the waves, CruiseConnect offers a seamless way to connect with like-minded individuals who will be sharing the same cruise ship journey.
 
 ## Link to Live Demo
+
 https://github.com/Ad31aid/real_sementic_html
 
 ## Features
@@ -23,12 +24,6 @@ https://github.com/Ad31aid/real_sementic_html
 ## Other Tech used:
 
 - Bootstrap, CSS Gradient Styling, Bing Image Creator
-
-# To deploy this project run
-
-```bash
-  npm run deploy
-```
 
 ## Contributing
 
