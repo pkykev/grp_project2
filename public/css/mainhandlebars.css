@@ -11,3 +11,17 @@
   .header h1 {
     margin: 0; /* Remove default margin to avoid extra space */
   }
+
+  .fa {
+    color: #fff;
+    margin-left: 5rem;
+  }
+
+  #recieve {
+    background-color: aqua;
+  }
+
+  #send {
+    background-color: orange;
+  }
+
