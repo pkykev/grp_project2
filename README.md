@@ -8,6 +8,12 @@ Ship Mate is a unique and exciting dating and meeting platform designed for trav
 
 https://github.com/Ad31aid/real_sementic_html
 
+## Screenshots of Working Applciation
+
+![Homepage](<public/css/images/Screenshot 2023-08-17 123626.png>)
+![Profile](<public/css/images/Screenshot 2023-08-17 123732.png>)
+![Inbox](<public/css/images/Screenshot 2023-08-17 123749.png>)
+
 ## Features
 
 - _Verified Travelers_: CruiseConnect ensures the authenticity of users by verifying travel plans and cruise bookings, enhancing the trustworthiness of the community.
