@@ -18,6 +18,14 @@ const sourcesPage = async (event) => {
   console.log('click')
 }
 
+const listPage = async (event) => {
+  event.preventDefault();
+  document.location.replace("/list")
+  console.log('click')
+}
+
+
+document.querySelector("#list").addEventListener("click", listPage)
 document.querySelector("#sources").addEventListener("click", sourcesPage)
 document.querySelector('#about').addEventListener('click', aboutPage);
 document.querySelector('#home').addEventListener('click', home);
