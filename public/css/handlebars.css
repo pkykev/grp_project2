@@ -1,8 +1,7 @@
 body {
     padding: 0;
     margin: 0;
-    background: url('./images.css/th.jpg');
-    background-size: cover;
+  
 }
 
 /*login form css*/
@@ -18,11 +17,16 @@ form{
     text-align: center;
     box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
     border-radius: 10px;
+    float: left 100px;
 }
+
+
 form .form-group{
     font-size: 15px;
     padding: 1px;
-    text-align: center;
+    text-align: left;
+    float: left 100px;
+
 }
 form input{
     outline: 0;
@@ -47,7 +51,7 @@ form button{
     text-transform: uppercase;
     outline: 0;
     border-radius: 10px;
-    background: #1ADBE5;
+    background: #1bd1da;
     width: 100%;
     border: 0;
     padding: 15px;
@@ -56,7 +60,7 @@ form button{
     cursor: pointer;
 }
 form button:hover, .form button:active, .form button:focus{
-    background-color: #06C5CF;
+    background-color: #fafafa;
     transition: all 1s ease 0s;
 }
 form .message{
@@ -65,7 +69,7 @@ form .message{
     font-size: 12px;
 }
 form .message a{
-    color: #06C5CF;
+    color: #ffffff;
     text-decoration: none;
 }
       
@@ -86,6 +90,11 @@ form .message a{
     max-width: 400px;
     margin: 0 auto;
     padding: 20px;
+  }
+
+  .form-content {
+    float: left 100px;
+
   }
 
   /* Adjustments for small screens */
@@ -126,4 +135,37 @@ form .message a{
     padding: 10px 0;
   } 
 
- 
+  .card {
+outline: #ff0000;
+outline-color: #222;
+outline-width: 20px;
+  }
+
+  .card-container {
+    max-height: 200px; /* Set the desired fixed height */
+    overflow-y: auto;
+    border: 1px solid #ccc;
+    padding: 10px;
+  }
+  
+  .scrollable-card {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .message-received, .message-sent {
+    padding: 10px;
+    border: 10px solid #4ff3f6;
+    margin: 10px 0;
+    background-color: #f9f9f9;
+  }
+  
+  .message-received h3, .message-sent h3 {
+    margin: 0;
+  }
+  
+  .message-received p, .message-sent p {
+    margin: 5px 0;
+  }
+  
