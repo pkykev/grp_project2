@@ -1,5 +1,5 @@
 const asyncHandler = require('express-async-handler')
-const Handlebars = require('handlebars')
+const Handlebars = require('express-handlebars')
 
 const fetchData = asyncHandler(async () => {
     try {
