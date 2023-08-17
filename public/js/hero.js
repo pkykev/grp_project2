@@ -9,4 +9,4 @@ function playNextVideo() {
   videos[currentVideoIndex].style.opacity = 0.3;
 }
 
-setInterval(playNextVideo, 10000); // Switch every 10 seconds
+setInterval(playNextVideo, 10000);

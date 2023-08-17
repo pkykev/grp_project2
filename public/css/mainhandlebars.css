@@ -1,15 +1,15 @@
 .page-title {
-    text-align: center; /* Center horizontally */
+    text-align: center; 
     margin-bottom: 0%;
 }
 .div-header {
-    text-align: center; /* Center horizontally */
-    padding-top: 0%; /* Center vertically */
+    text-align: center; 
+    padding-top: 0%; 
     color: rgb(252, 252, 252);
   }
 
   .header h1 {
-    margin: 0; /* Remove default margin to avoid extra space */
+    margin: 0; 
   }
 
   .fa {

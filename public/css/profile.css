@@ -22,7 +22,7 @@
   transition: opacity 0.3s ease-in-out;
 }
 
-ul { list-style: none; } /* Remove default bullets */
+ul { list-style: none; }
 
 li::before {
     font-family: 'Font Awesome 5 Free';
