@@ -2,7 +2,7 @@ const router = require('express').Router();
 const { Mail } = require('../../models');
 const { User } = require('../../models');
 
-router.post('/test', async (req, res) => {
+router.post('/', async (req, res) => {
   console.log(req.body)
   const { reciever, title, messagetxt } = req.body
   console.log(reciever, title, messagetxt)
@@ -14,7 +14,7 @@ router.post('/test', async (req, res) => {
       messagetxt: messagetxt,
       sender: req.session.user_id
     })
-    res.status(200).json(newMail)
+    res.status(200)
   } catch (err) {
     res.status(400).json(err)
   }
