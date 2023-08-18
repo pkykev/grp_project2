@@ -11,7 +11,7 @@ const sendMessage = async (event) => {
   console.log(reciever)
   console.log(title)
   console.log(messagetxt)
-  const test = await fetch('/api/inbox/test', {
+  const test = await fetch('/api/inbox/', {
     method: 'POST',
     body: JSON.stringify({ reciever, title, messagetxt }),
     headers: { 'Content-Type': 'application/json' },
