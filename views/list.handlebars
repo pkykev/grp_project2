@@ -1,37 +1,33 @@
-<!DOCTYPE html>
+
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/css/list.css">
-    <title> Listing</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>User Listing</title>
+    <script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"></script>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 </head>
 <body>
-    <header>
-        <h1>Listing</h1>
-    </header>
-    <main>
-        <section id="friend-list">
-            <!-- Friend profiles will be generated here -->
-        </section>
-    </main>
-    <footer>
-        <p>&copy; 2023  Listing</p>
-    </footer>
-    <script src="handlebars-v4.7.7.min.js"></script>
-    <script id="friend-template" type="text/x-handlebars-template">
-        {{#each friends}}
-        <div class="friend-card">
-            <div class="friend-details">
-                <img class="friend-picture" src="{{profile_picture}}" alt="{{first_name}}'s Picture">
-                <p class="friend-name">{{first_name}} {{last_name}}</p>
-                <p class="friend-email">{{email}}</p>
-                <p class="friend-gender">Gender: {{gender}}</p>
-                <p class="friend-location">Cruise Location: {{cruise_location}}</p>
-            </div>
-        </div>
-        {{/each}}
-    </script>
-    <script src="/js/list.js"></script>
+  <div class="container mt-4">
+    <h1>Find People</h1>
+    <div id="user-list"></div>
+  </div>
+
+  <script id="user-template" type="text/x-handlebars-template">
+    {{#each users}}
+    <div class="card mt-3">
+      <div class="card-body">
+        <h5 class="card-title">{{first_name}} {{last_name}}</h5>
+        <p class="card-text"><strong>Email:</strong> {{email}}</p>
+        <p class="card-text"><strong>Gender:</strong> {{gender}}</p>
+        <p class="card-text"><strong>Sexual Orientation:</strong> {{sexual_orientation}}</p>
+        <p class="card-text"><strong>Primary Language:</strong> {{primary_language_spoken}}</p>
+        <p class="card-text"><strong>Cruise Location:</strong> {{cruise_location}}</p>
+      </div>
+    </div>
+    {{/each}}
+  </script>
+
+  <script src="/js/list.js"></script>
 </body>
 </html>
